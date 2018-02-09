@@ -12,4 +12,4 @@ export default props => (
             <span className={`glyphicon glyphicon-${props.icon} form-control-feedback`}></span>
         </div>
     </If>
-);
+)
