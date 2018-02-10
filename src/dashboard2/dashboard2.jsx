@@ -5,9 +5,7 @@ import ContentHeader from '../common/template/contentHeader'
 import Content from '../common/template/Content';
 import ValueBox from '../common/widget/ValueBox'
 import Row from '../common/layout/row'
-
-const BASE_URL = 'http://localhost:3003/api'
-
+import consts from '../const'
 
 class Dashboard2 extends Component {
 
@@ -18,7 +16,7 @@ class Dashboard2 extends Component {
     }
 
     componentWillMount() {
-        Axios.get(`${BASE_URL}/billingCycles/summary`)
+        Axios.get(`${consts.API_URL}/billingCycles/summary`)
             .then(resp => this.setState(resp.data))
     }
     
